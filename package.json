@@ -1,6 +1,6 @@
 {
   "name": "imicros-modeler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Modeler (wrapper of bpmn.js)",
   "main": "index.js",
   "directories": {
