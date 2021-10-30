@@ -3,9 +3,9 @@
  */
 "use strict";
 
-import * as Modeler from "./lib/modeler.mjs";
+import * as Modeler from "./lib/modeler";
 
-module.exports = {
+export {
     Modeler
 };
 
