@@ -3,4 +3,9 @@
  */
 "use strict";
 
-module.exports = require("./lib");
+import * as Modeler from "./lib/modeler.mjs";
+
+module.exports = {
+    Modeler
+};
+

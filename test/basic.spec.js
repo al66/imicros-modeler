@@ -1,6 +1,6 @@
 "use strict";
 
-import * as Modeler from "../lib/modeler";
+import { Modeler } from "../index.js";
 
 describe("Test Basic Modeler", () => {
 
