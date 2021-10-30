@@ -1,6 +1,7 @@
 "use strict";
 
-import { Modeler } from "../index.js";
+// import { Modeler } from "../dist/main.js";
+const { Modeler } = require("../index.js");
 
 describe("Test Basic Modeler", () => {
 

@@ -3,7 +3,6 @@
   "version": "0.0.4",
   "description": "Modeler (wrapper of bpmn.js)",
   "main": "index.js",
-  "type": "module",
   "directories": {
     "lib": "lib"
   },
@@ -23,10 +22,16 @@
         }
       ]
     ],
-    "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ]
   },
   "jest": {
-    "moduleFileExtensions": ["js", "jsx", "mjs"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "mjs"
+    ],
     "transform": {},
     "transformIgnorePatterns": [
       "node_modules/(?!(bpmn-js)/.*)"
@@ -55,7 +60,9 @@
     "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "babel-jest": "^27.3.1",
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
   },
   "dependencies": {
     "bpmn-js": "^8.8.2"
