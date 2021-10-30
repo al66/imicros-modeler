@@ -1,29 +1,36 @@
 {
   "name": "imicros-modeler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Modeler (wrapper of bpmn.js)",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --coverage --no-cache --silent",
-    "test-local": "jest --coverage --no-cache"
+    "build": "babel lib -d dist",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --no-cache --silent",
+    "test-local": "jest --no-cache"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": ["@babel/plugin-transform-modules-commonjs"]
   },
   "jest": {
-    "collectCoverageFrom": [
-      "lib/*.js",
-      "lib/util/*.js"
+    "moduleFileExtensions": ["js", "jsx", "mjs"],
+    "transform": {},
+    "transformIgnorePatterns": [
+      "node_modules/(?!(bpmn-js)/.*)"
     ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/dev/"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dev/"
-    ],
-    "rootDir": ".",
     "roots": [
       "./test"
     ]
@@ -43,7 +50,12 @@
   },
   "homepage": "https://github.com/al66/imicros-modeler#readme",
   "devDependencies": {
-    "jest": "^27.0.6"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-jest": "^27.3.1",
+    "jest": "^27.3.1"
   },
   "dependencies": {
     "bpmn-js": "^8.8.2"
